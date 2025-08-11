@@ -4,18 +4,16 @@ using namespace std;
 
 int main()
 {
-    string verbe;
-    cout << "Entrez le un verbe a l'infinitif :"; cin >> verbe;
-    int taille= verbe.size();
-        if (verbe.substr(taille - 2)== "er" && verbe !="aller"){
-            cout << "ce verbe appartient au 1e groupe."<< endl;
-        }
-        else if
-            (verbe.substr(taille - 2) == "ir") {
-            cout << " ce verbe appartient au 2e groupe."<< endl;
-        }
-        else{
-            cout << "ce verbe appartient au 3e groupe."<< endl;
-        }
+    string camelcase;
+    cout << "Entrez une chaine en camelcase :"; cin >> camelcase;
+    cout << "Phrase convertie :";
+    for ( size_t i=0; i< camelcase.length(); ++i){
+
+            if (isupper(camelcase[i]&& i !=0)){
+    cout<< " ";
+    }
+    cout<< camelcase[i];
+    }
+    cout<< endl;
     return 0;
 }
